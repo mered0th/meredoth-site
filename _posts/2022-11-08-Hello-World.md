@@ -9,8 +9,16 @@ thumbnail: /assets/img/posts/yellow-dog.png
 keywords:  General
 permalink: /blog/Hello-World!/
 usemathjax: true
+toc: true
+toc_label: "My Table of Contents"
+toc_icon: "cog"
 ---
 
+## Hello World
 
-Hello World!!!
+hello
+
+## Hello again
+
+hello again
 

@@ -3,7 +3,7 @@ subtitle: My personal projects and blogging site.
 description: >- # this means to ignore newlines until "baseurl:"
   A site for Unity and c# enthusiasts.
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "https://mysite-5l1.pages.dev" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
@@ -56,12 +56,12 @@ hero_cover_img: cover.png # replace this for changing homepage cover (eg. try co
 #                visibility: true
 #
 ## Projects
-#author_project_details:
-#              - project_thumbnail: gamershub.png
-#                project_title: Gamers Hub
-#                project_description: A Platform built for Gamers and Game Devs
-#                project_url: https://gamershub.in
-#                visibility: true
+author_project_details:
+              #- project_thumbnail: /assets/img/cover.png
+              - project_title: Unity Fluent Debug
+                project_url: https://github.com/meredoth/Unity-Fluent-Debug
+                project_description: A wrapper over Unity debug class with fluent syntax, extra functionality and no performance cost when disabled.
+                visibility: true
 #              - project_thumbnail: hack4r.PNG
 #                project_title: Hack4r
 #                project_description: A Platform built for Hackers and Penetration #Testers
@@ -107,7 +107,7 @@ permalink: pretty
 # Choose what to show ( can be true or false)
 show_author_work_experiences: false
 show_author_education_details: false
-show_author_project_details: false
+show_author_project_details: true
 
 # pagination of posts
 paginate: 5
