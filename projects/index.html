@@ -1,0 +1,38 @@
+---
+layout: projects
+title: Projects
+permalink: /projects/
+---
+
+
+    <div class="col-lg-8 offset-md-2">
+
+      <div class="row">
+    {% assign count = 0 %}
+    {% assign align = "left" %}
+    {% for project in site.data.projects.overview %}
+    {% if count == 0 %}<div class="row">{% endif %}
+      <div class="card">
+        <div class="card-title"> {{project.title}}</div>
+        <div class="row">
+
+        <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.directory }}.html">
+          <img class="img-thumbnail" alt="{{ project.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/img/projects/{% if project.picture_path %}{{ project.picture_path }}{% else %}{{ project.directory }}{% endif %}/{{ project.preview.thumbnail }}" />
+        </a>
+        </div>
+      </div>
+    {% if count == 1 %}</div>{% endif %}
+    {% assign count = count | plus: 1 %}
+    {% assign align = "right" %}
+    {% if count >= 2 %}
+    {% assign align = "left" %}
+    {% assign count = 0 %}
+    {% endif %}
+    {% endfor %}
+
+    {% if count != 1 %}
+    </div>
+    {% endif %}
+
+    </div>
+</div>

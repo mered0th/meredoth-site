@@ -10,6 +10,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 urls:
     - text: Home
       url: /
+    - text: Projects
+      url: /projects
     - text: Games
       url: /games
     - text: Blog
@@ -141,6 +143,11 @@ defaults:
     scope:
       path: "games"
     values:
+      permalink: /:path/:basename:output_ext
+  -
+    scope:
+      path: "projects"
+      values:
       permalink: /:path/:basename:output_ext
   -
     scope:
