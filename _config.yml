@@ -11,7 +11,7 @@ urls:
     - text: Home
       url: /
     - text: Games
-      url: /gallery
+      url: /games
     - text: Blog
       url: /blog
     - text: About
@@ -60,7 +60,7 @@ author_project_details:
               #- project_thumbnail: /assets/img/cover.png
               - project_title: Unity Fluent Debug
                 project_url: https://github.com/meredoth/Unity-Fluent-Debug
-                project_description: A wrapper over Unity debug class with fluent syntax, extra functionality and no performance cost when disabled.
+                project_description: A wrapper over Unity debug class with fluent syntax, extra functionality and no performance cost when disabled. 
                 visibility: true
 #              - project_thumbnail: hack4r.PNG
 #                project_title: Hack4r
@@ -139,7 +139,7 @@ collections:
 defaults:
   -
     scope:
-      path: "gallery"
+      path: "games"
     values:
       permalink: /:path/:basename:output_ext
   -

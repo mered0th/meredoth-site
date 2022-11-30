@@ -14,11 +14,5 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 ---
 
-## Hello World
-
-hello
-
-## Hello again
-
-hello again
+Hello World!
 
