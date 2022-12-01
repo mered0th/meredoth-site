@@ -46,7 +46,7 @@ hero_cover_img: cover.png # replace this for changing homepage cover (eg. try co
 #              company_url: https://microsoft.com
 #              designation: Azure Developer
 #              description: Worked on various Azure Cloud Products
-#              visibility: true
+#              visibility: false
 #
 ## Education
 #author_education_details:
@@ -55,15 +55,15 @@ hero_cover_img: cover.png # replace this for changing homepage cover (eg. try co
 #                college_url: https://mit.org
 #                college_degree: CS Engineer
 #                description: Bachelor of Technology
-#                visibility: true
+#                visibility: false
 #
 ## Projects
 author_project_details:
-              #- project_thumbnail: /assets/img/cover.png
-              - project_title: Unity Fluent Debug
-                project_url: https://github.com/meredoth/Unity-Fluent-Debug
+              - project_thumbnail: UnityFluentDebug.png
+                project_title: Unity Fluent Debug
                 project_description: A wrapper over Unity debug class with fluent syntax, extra functionality and no performance cost when disabled. 
                 visibility: true
+                project_url: https://github.com/meredoth/Unity-Fluent-Debug
 #              - project_thumbnail: hack4r.PNG
 #                project_title: Hack4r
 #                project_description: A Platform built for Hackers and Penetration #Testers
@@ -133,7 +133,7 @@ paginate_path: "/blog/page/:num/"
 #     category: '/category/:name/'
 
 collections:
-  products:
+  projects:
     output: false
 
 defaults:

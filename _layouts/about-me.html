@@ -52,20 +52,16 @@ layout: default
         {% if project.project_thumbnail %}
         <div class="col-md-6">          
           <img
-            src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}"
+            src="{{site.url}}{{site.baseurl}}/assets/img/{{ project.project_thumbnail }}"
             class="project-img"           
           />
         </div>
         {% endif %}
         <div class="col-md-4 center">
-          <h4 class="experience-title">{{ project.project_title }}</h4>
-          <h6 class="experience-info">{{ project.project_info}}</h6>
-          <p class="experience-desc">{{ project.project_description }}</p>
-          <p>
-            <a class="project-link" href="{{project.project_url}}"
-              >{{ project.project_url}}</a
-            >
-          </p>
+          <h4 class="project-title">{{ project.project_title }}</h4>
+          <h6 class="project-info">{{ project.project_info}}</h6>
+          <p class="project-desc">{{ project.project_description }}</p>
+          <p><a href="{{project.project_url}}">{{ project.project_url}}</a></p>
         </div>
       </div>
       <br />
