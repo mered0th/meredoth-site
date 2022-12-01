@@ -3,15 +3,17 @@ subtitle: My personal projects and blogging site.
 description: >- # this means to ignore newlines until "baseurl:"
   A site for Unity and c# enthusiasts.
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "https://mysite-5l1.pages.dev" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
 urls:
     - text: Home
       url: /
+    - text: Projects
+      url: /projects
     - text: Games
-      url: /gallery
+      url: /games
     - text: Blog
       url: /blog
     - text: About
@@ -44,7 +46,7 @@ hero_cover_img: cover.png # replace this for changing homepage cover (eg. try co
 #              company_url: https://microsoft.com
 #              designation: Azure Developer
 #              description: Worked on various Azure Cloud Products
-#              visibility: true
+#              visibility: false
 #
 ## Education
 #author_education_details:
@@ -53,15 +55,15 @@ hero_cover_img: cover.png # replace this for changing homepage cover (eg. try co
 #                college_url: https://mit.org
 #                college_degree: CS Engineer
 #                description: Bachelor of Technology
-#                visibility: true
+#                visibility: false
 #
 ## Projects
-#author_project_details:
-#              - project_thumbnail: gamershub.png
-#                project_title: Gamers Hub
-#                project_description: A Platform built for Gamers and Game Devs
-#                project_url: https://gamershub.in
-#                visibility: true
+author_project_details:
+              - project_thumbnail: UnityFluentDebug.png
+                project_title: Unity Fluent Debug
+                project_description: A wrapper over Unity debug class with fluent syntax, extra functionality and no performance cost when disabled. 
+                visibility: true
+                project_url: https://github.com/meredoth/Unity-Fluent-Debug
 #              - project_thumbnail: hack4r.PNG
 #                project_title: Hack4r
 #                project_description: A Platform built for Hackers and Penetration #Testers
@@ -107,20 +109,20 @@ permalink: pretty
 # Choose what to show ( can be true or false)
 show_author_work_experiences: false
 show_author_education_details: false
-show_author_project_details: false
+show_author_project_details: true
 
 # pagination of posts
 paginate: 5
 per_page: 5
 paginate_path: "/blog/page/:num/"
 
-# minify
-# compress_html:
-#   clippings: all
-#   comments: ["<!-- ", " -->"]
-#   endings: all
-#   ignore:
-#     envs: ['development']
+#minify
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
 
 # Archives
 # jekyll-archives:
@@ -130,25 +132,22 @@ paginate_path: "/blog/page/:num/"
 #   permalinks:
 #     category: '/category/:name/'
 
-collections:
-  products:
-    output: false
-  authors:
-    output: true
-
 defaults:
   -
     scope:
-      path: "gallery"
+      path: ""
+    values:
+      author: Giannis Akritidis
+  -
+    scope:
+      path: "games"
     values:
       permalink: /:path/:basename:output_ext
   -
     scope:
-      path: ""
-      type: authors
+      path: "projects"
     values:
-      layout: author
-      permalink: /blog/authors/:slug
+      permalink: /:path/:basename:output_ext
   -
     scope:
       path: 'assets/**'
@@ -164,14 +163,14 @@ plugins:
   - jekyll-admin
 
 # Jekyll Admin Config
-jekyll_admin:
+#jekyll_admin:
   # hidden_links:
   #   - posts
   #   - pages
   #   - staticfiles
   #   - datafiles
   #   - configuration
-  homepage: "posts"
+  #homepage: "posts"
 
 
 # Exclude from processing.

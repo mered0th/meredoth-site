@@ -1,7 +1,7 @@
 ---
-layout: gallery
-title: Games
-permalink: /gallery/
+layout: projects
+title: Projects
+permalink: /projects/
 ---
 
 
@@ -10,14 +10,14 @@ permalink: /gallery/
       <div class="row">
     {% assign count = 0 %}
     {% assign align = "left" %}
-    {% for gallery in site.data.galleries.overview %}
+    {% for project in site.data.projects.overview %}
     {% if count == 0 %}<div class="row">{% endif %}
       <div class="card">
-        <div class="card-title"> {{gallery.title}}</div>
+        <div class="card-title"> {{project.title}}</div>
         <div class="row">
 
-        <a href="{{ site.url }}{{ site.baseurl }}/gallery/{{ gallery.directory }}.html">
-          <img class="img-thumbnail" alt="{{ gallery.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/img/gallery/{% if gallery.picture_path %}{{ gallery.picture_path }}{% else %}{{ gallery.directory }}{% endif %}/{{ gallery.preview.thumbnail }}" />
+        <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.directory }}.html">
+          <img class="img-thumbnail" alt="{{ project.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/img/projects/{% if project.picture_path %}{{ project.picture_path }}{% else %}{{ project.directory }}{% endif %}/{{ project.preview.thumbnail }}" />
         </a>
         </div>
       </div>
