@@ -21,6 +21,7 @@ urls:
     - text: Contact
       url : /contact
 
+enviroment: production
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
