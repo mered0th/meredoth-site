@@ -5,9 +5,9 @@ permalink: /games/
 ---
 
 
-    <div class="col-lg-8 offset-md-2">
+<div class="col-lg-8 offset-md-2">
 
-      <div class="row">
+  <div class="row">
     {% assign count = 0 %}
     {% assign align = "left" %}
     {% for game in site.data.games.overview %}
@@ -24,7 +24,7 @@ permalink: /games/
     {% if count == 1 %}</div>{% endif %}
     {% assign count = count | plus: 1 %}
     {% assign align = "right" %}
-    {% if count >= 2 %}
+    {% if count >= 3 %}
     {% assign align = "left" %}
     {% assign count = 0 %}
     {% endif %}
@@ -34,5 +34,5 @@ permalink: /games/
     </div>
     {% endif %}
 
-    </div>
+  </div>
 </div>
