@@ -34,10 +34,12 @@ function modeSwitcher() {
 			document.documentElement.setAttribute('data-theme', 'light');
 			localStorage.setItem('color-theme', 'light');
 			setGiscusTheme("light");
+			recaptcha.setAttribute("data-theme", "light");
 		} else {
 			document.documentElement.setAttribute('data-theme', 'dark');
 			localStorage.setItem('color-theme', 'dark');
 			setGiscusTheme("dark");
+			recaptcha.setAttribute("data-theme", "dark");
 		}
 
 	});

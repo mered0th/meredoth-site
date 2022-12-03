@@ -1,46 +1,38 @@
-<script src="https://giscus.app/client.js"
-        data-repo="mered0th/meredoth-site"
-        data-repo-id="R_kgDOIi8DMA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOIi8DMM4CS4Lh"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark"
-        data-lang="en"
-        crossorigin="anonymous"
-        async></script>
+
+<div id="commentsSection"></div>
 
 <script>
-    window.addEventListener("load", function () {
+    document.addEventListener('DOMContentLoaded', function() {
+        const giscusAttributes = {
+        "src": "https://giscus.app/client.js", 
+        "data-repo": "mered0th/meredoth-site",
+        "data-repo-id": "R_kgDOIi8DMA",
+        "data-category": "Announcements",
+        "data-category-id": "DIC_kwDOIi8DMM4CS4Lh",
+        "data-mapping": "pathname",
+        "data-strict": "0",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "bottom",
+        "data-theme": getGisqusColor(),
+        "data-lang": "en",
+        "crossorigin": "anonymous",
+        "async": "",
+        };
+
+        const giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+        document.getElementById('commentsSection').appendChild(giscusScript);
+    });
+
+    function getGisqusColor()  {
         if (!localStorage.getItem('color-theme')) {
-            setGiscusTheme('dark');
+            return "dark";
         }
         else {
-            var color = localStorage.getItem('color-theme');
-            if(color != 'dark')
-            {
-                setTimeout(() => { 
-                    setGiscusTheme('light');
-            },  400);
-            }
+            return localStorage.getItem('color-theme');
         }
-        }, false);
-
-    function setGiscusTheme(color) {
-            function sendMessage(message) {
-                const iframe = document.querySelector('iframe.giscus-frame');
-                if (!iframe) return;
-                iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-            }
-            sendMessage({
-                setConfig: {
-                    theme: color,
-                },
-            }); 
-        }  
+    } 
 </script>
 
 

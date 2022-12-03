@@ -18,5 +18,16 @@
                <label for="contact-form-file"> Attachments :</label>
             <input type="file" name="file" class="form-control" id="contact-form-file" placeholder="Attach files"/>
            </div>
+            <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
             <button type="submit" value="Send" class="btn btn-lg btn-dark">Submit</button>
+            
+            <!-- reCaptcha code-->
+            <script>
+              grecaptcha.ready(function () {
+                grecaptcha.execute('6LclM1IjAAAAAErxpSnVh8lcMsDhXZcpESafQIm-', { action: 'homepage' })
+                  .then(function (token) {
+                    document.getElementById('captchaResponse').value = token;
+                  });
+              });
+            </script>
 </form>

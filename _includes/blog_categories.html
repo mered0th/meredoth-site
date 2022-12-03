@@ -5,5 +5,8 @@
                 <a href="{{ site.baseurl }}/blog/categories/{{ tag_name }}">{{ tag_name }}</a>
             </li>
             <a name="{{ tag_name | slugize }}"></a>
-
             {% endfor %}
+            <p style="color:orange;text-align:center"> 
+                <br>
+                <a href="{{ " /feed.xml " | prepend: site.baseurl }}"> Subscribe via RSS</a>
+            </p>
