@@ -10,10 +10,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 urls:
     - text: Home
       url: /
+    #- text: Games
+    #  url: /games
     - text: Projects
       url: /projects
-    - text: Games
-      url: /games
     - text: Blog
       url: /blog
     - text: About
@@ -58,7 +58,7 @@ hero_cover_img: cover.png # replace this for changing homepage cover (eg. try co
 #
 ## Projects
 author_project_details:
-              - project_thumbnail: UnityFluentDebug.png
+              - project_thumbnail: UFD_title.png
                 project_title: Unity Fluent Debug
                 project_description: A wrapper over Unity debug class with fluent syntax, extra functionality and no performance cost when disabled. 
                 visibility: true
@@ -85,9 +85,6 @@ github_username:  meredoth
 
 # disqus_shortname: sujay-kundu
 #hyvor_talk_website_id: 476
-
-# wakatime username (coding activity)
-#wakatime_username: sujaykundu777
 
 # mailchimp embedded form url (newsletter):
 #mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
@@ -116,12 +113,12 @@ per_page: 5
 paginate_path: "/blog/page/:num/"
 
 #minify
-#compress_html:
-#  clippings: all
-#  comments: ["<!-- ", " -->"]
-#  endings: all
-#  ignore:
-#    envs: ['development']
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    #envs: ['development']
 
 # Archives
 # jekyll-archives:
