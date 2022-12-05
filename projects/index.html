@@ -13,13 +13,12 @@ permalink: /projects/
     {% for project in site.data.projects.overview %}
     {% if count == 0 %}<div class="row">{% endif %}
       <div class="card">
-        <div class="card-title"> {{project.title}}</div>
-        <div class="row">
-
         <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.directory }}.html">
-          <img class="img-thumbnail" alt="{{ project.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/img/projects/{% if project.picture_path %}{{ project.picture_path }}{% else %}{{ project.directory }}{% endif %}/{{ project.preview.thumbnail }}" />
+          <div class="card-title"> <h5><b> {{ project.title }} </b></h5></div>
+          <div class="row">
+            <img class="img-thumbnail" alt="{{ project.title }}" src="{{ site.url }}{{ site.baseurl }}/assets/img/projects/{% if project.picture_path %}{{ project.picture_path }}{% else %}{{ project.directory }}{% endif %}/{{ project.preview.thumbnail }}" />
+          </div>
         </a>
-        </div>
       </div>
     {% if count == 1 %}</div>{% endif %}
     {% assign count = count | plus: 1 %}
