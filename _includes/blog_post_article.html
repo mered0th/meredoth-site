@@ -19,7 +19,12 @@
       {% if post %} {% assign categories = post.categories %} {% else %} {%
       assign categories = page.categories %} {% endif %} Category : {% for
       category in categories %}
-      <a href="{{site.baseurl}}/blog/categories/{{category|slugize}}"
+      {% if category == 'C#' %}
+        {% assign url_name = "C%23" %}
+      {% else %}
+        {% assign url_name = tag_name %}
+      {% endif %}
+      <a href="{{site.baseurl}}/blog/categories/{{url_name|slugize}}"
         >{{category}}</a
       >
       {% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}
