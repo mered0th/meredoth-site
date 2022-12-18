@@ -133,7 +133,13 @@ public static class EnumExtensions
 }
 ```
 
-now looping our enum gets easy by writing ```currentDay = currentDay.Next()```, but most importantly our code now, isn't dependent on the enum values. We can add, remove  or change the values of our enum, as long as we keep our First and Last values updated.
+now looping our enum gets easy by writing 
+
+```cs
+currentDay = currentDay.Next()
+```
+
+ but most importantly our code now, isn't dependent on the enum values. We can add, remove  or change the values of our enum, as long as we keep our First and Last values updated.
 
 A thing to notice here is that by adding the First and Last entries in our enum the statement:
 
@@ -154,8 +160,7 @@ var days = Enum.GetValues<Day>().Distinct();
 foreach(var day in days) {}
 ```
 
-What about the  
-```A variable should only be doing one thing```
+What about the  ```A variable should only be doing one thing```
 principle ? Can enums help us with other situations where this principle is violated ?
 
 Sure but first let's see another common use case where we could introduce a variable to avoid this. 

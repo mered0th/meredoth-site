@@ -67,7 +67,7 @@ For example let's suppose that each day has morning, afternoon, evening and nigh
 
 If we add boolean variables like ```isMorning``` and then add if statements for each of those boolean variables inside our switch statement, in a way that each if statement holds its own kind of logic (with its own if statements inside and variables) that would be a nightmare to maintain because the [cognitive complexity](https://www.sonarsource.com/docs/CognitiveComplexity.pdf) skyrockets.
 
-We need a solution that gets rid of those if statements but also keeps the logic of each unique case concentrated, easy to find and easy to change so that every change affects only a small part of our code and any bugs won't 'bleed' to other parts of our program.
+We need a solution that gets rid of those if statements but also keeps the logic of each unique case concentrated, easy to find and easy to change, so that every change affects only a small part of our code and any bugs won't 'bleed' to other parts of our program.
 
 This would be a good case to use tables that the index maps to logic instead of data. Let's try that:
 

@@ -32,17 +32,20 @@
   </div>
 
   <div class="card-body" itemprop="articleBody">
-    <img
-      class="card-img-top"
-      src="{{site.url}}{{site.baseurl}}{{ page.thumbnail }}"
-      alt="{{ post.title }}"
-    />
+    <div class="text-center">
+      <img
+        class="card-img-topsmall"
+        src="{{site.url}}{{site.baseurl}}{{ page.thumbnail }}"
+        alt="{{ post.title }}"
+      />
+      </div>
     <br />
     <br />
     {{ content }}
     <br />
     {%- include share_page.html -%}
   </div>
+  </article>
   {%- if site.hyvor_talk_website_id -%}
   <div class="comments">
     {%- include hyvor_comments.html -%}
