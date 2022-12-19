@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A guide for better use of enums in c# part 2."
+title: "A guide for better use of enums in C# part 2."
 summary: "Mapping data to logic."
 date: '2022-12-12'
 category: C#

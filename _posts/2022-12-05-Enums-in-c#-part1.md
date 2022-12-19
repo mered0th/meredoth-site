@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A guide for better use of enums in c# part 1."
+title: "A guide for better use of enums in C# part 1."
 summary: "A variable should only be doing one thing."
 date: '2022-12-5'
 category: C#

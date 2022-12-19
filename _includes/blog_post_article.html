@@ -22,7 +22,7 @@
       {% if category == 'C#' %}
         {% assign url_name = "C%23" %}
       {% else %}
-        {% assign url_name = tag_name %}
+        {% assign url_name = category %}
       {% endif %}
       <a href="{{site.baseurl}}/blog/categories/{{url_name|slugize}}"
         >{{category}}</a
