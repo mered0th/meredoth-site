@@ -3,7 +3,7 @@ layout: page
 title: Unity
 permalink: /blog/categories/Unity/
 ---
-<!-- Unity logo by https://commons.wikimedia.org/wiki/File:Unity_Technologies_logo.svg -->
+
 <h5> Posts by Category : {{ page.title }} </h5>
 
 <div class="card">
