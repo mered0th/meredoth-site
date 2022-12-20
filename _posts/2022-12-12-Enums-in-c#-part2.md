@@ -32,31 +32,31 @@ Still there is something that is annoying in our code. That switch statement in 
 
 ```cs
 switch (currentDay)
-    {
-        case Day.Monday:
-            //do Monday things
-            break;
-        case Day.Tuesday:
-            //do Tuesday things
-            break;
-        case Day.Wednesday:
-            //do Wednesday things
-            break;
-        case Day.Thursday:
-            //do Thursday things
-            break;
-        case Day.Friday:
-            //do Friday things
-            break;
-        case Day.Saturday:
-            //do Saturday things
-            break;
-        case Day.Sunday:
-            //do Sunday things
-            break;
-        default:
-            throw new ArgumentOutOfRangeException();
-    }
+{
+    case Day.Monday:
+        //do Monday things
+        break;
+    case Day.Tuesday:
+        //do Tuesday things
+        break;
+    case Day.Wednesday:
+        //do Wednesday things
+        break;
+    case Day.Thursday:
+        //do Thursday things
+        break;
+    case Day.Friday:
+        //do Friday things
+        break;
+    case Day.Saturday:
+        //do Saturday things
+        break;
+    case Day.Sunday:
+        //do Sunday things
+        break;
+    default:
+        throw new ArgumentOutOfRangeException();
+}
 ```
 
 What if our enum isn't composed by finite values, like the days of the week but is prone to change because of the requirements of our program, like an enum that holds names or titles etc.
