@@ -3,7 +3,7 @@ subtitle: My personal projects and blogging site.
 description: >- # this means to ignore newlines until "baseurl:"
   A site for Unity and c# enthusiasts.
 
-url: "https://meredoth-site.pages.dev" # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "https://giannisakritidis.com" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
@@ -26,9 +26,9 @@ urls:
 author_logo: profile.jpg
 author: Giannis Akritidis
 author_bio: Hi, I am Giannis Akritidis. Programmer and Unity developer.
-author_email: "giannisakr@gmail.com"
+author_email: "contact@giannisakritidis.com"
 author_location: Athens Greece
-author_website_url: ""
+author_website_url: "https://giannisakritidis.com"
 typewrite-text: Personal site for all things C# and Unity.
 hero_cover_img: cover.png # replace this for changing homepage cover (eg. try cover.jpeg). Image should be in /assets/img
 
