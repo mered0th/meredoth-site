@@ -16,25 +16,12 @@ layout: null
     {% for post in site.posts limit:1000 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
+        <description>{{ post.summary | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post.thumbnail | xml_escape }}" />
       </item>
     {% endfor %} 
-
-<!--    
-    {% for page in site.pages %}
-      {% if page.layout == 'page' %}
-        {% if page.name != '404.md' %}
-          <item>
-            <title>{{ page.title | xml_escape }}</title>
-            <description>{{ page.content | xml_escape }}</description>
-            <link>{{ page.url | prepend: site.baseurl | prepend: site.url }}</link>
-          </item>
-        {% endif %}
-      {% endif %}
-    {% endfor %} -->
-
   </channel>
 </rss>

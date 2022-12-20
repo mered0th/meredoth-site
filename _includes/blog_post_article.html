@@ -32,14 +32,6 @@
   </div>
 
   <div class="card-body" itemprop="articleBody">
-    <div class="text-center">
-      <img
-        class="card-img-topsmall"
-        src="{{site.url}}{{site.baseurl}}{{ page.thumbnail }}"
-        alt="{{ post.title }}"
-      />
-      </div>
-    <br />
     <br />
     {{ content }}
     <br />
@@ -51,9 +43,5 @@
     {%- include hyvor_comments.html -%}
    </div>
     {%- endif -%}
-  <!-- Incomment incase you want to use Disqus
-      <div id="disqus_thread"></div>
-   -->
-
-
+    
 </article>
