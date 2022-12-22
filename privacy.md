@@ -16,11 +16,11 @@ I do not collect and store any personal data, unless you want to contact me. If 
 * Message – the body of your letter
 * Attachments - email attachments relative to your inquiry
 
-I use Getform, Cloudfare and Gmail in order to get your messages and to reply them. Except these three services, i do not provide your data to any other third party.
+I use Getform, Cloudflare and Gmail in order to get your messages and to reply them. Except these three services, i do not provide your data to any other third party.
 
 Getform's Privacy Policy can be found here: <https://getform.io/legal/privacy-policy>
 
-Cloudfare's Privacy Policy is here: <https://www.cloudflare.com/privacypolicy/>
+Cloudflare's Privacy Policy is here: <https://www.cloudflare.com/privacypolicy/>
 
 Gmail’s Privacy Policy is here: <https://policies.google.com/privacy>
 
