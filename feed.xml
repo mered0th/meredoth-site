@@ -29,7 +29,7 @@ layout: null
           {{ post.excerpt | xml_escape}}
           {% endif %}
           <br />
-          {{ post.content | xml_escape}}
+          {{ post.content | strip | xml_escape}}
           <hr /><p><a href="mailto:{{ site.author_email }}?subject={{ post.title | uri_escape }}">Reply via email</a></p>]]>
         </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
