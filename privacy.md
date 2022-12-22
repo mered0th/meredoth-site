@@ -18,7 +18,7 @@ I do not collect and store any personal data, unless you want to contact me. If 
 
 I use Getform, Cloudfare and Gmail in order to get your messages and to reply them. Except these three services, i do not provide your data to any other third party.
 
-Getform's Privacy Policy can be found here: <https://getform.io/legal/terms>
+Getform's Privacy Policy can be found here: <https://getform.io/legal/privacy-policy>
 
 Cloudfare's Privacy Policy is here: <https://www.cloudflare.com/privacypolicy/>
 
