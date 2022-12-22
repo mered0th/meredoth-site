@@ -3,7 +3,7 @@ layout: page
 permalink: /terms.html
 ---
 
-# Terms
+# Terms and conditions
 
 This site uses analytics cookies and other tracking technologies to improve your browsing experience, to analyze the website traffic, and to understand where the visitors are coming from.
 
