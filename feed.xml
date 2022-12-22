@@ -21,8 +21,17 @@ layout: null
     {% for post in site.posts limit:1000 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.summary | xml_escape }}</description>
-        <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}"><![CDATA[{{ post.content | strip }}]]></content>
+        <name>{{ site.author | default: site.author | xml_escape }}</name>
+        <description><![CDATA[
+          {% if post.summary %}
+          {{ post.summary | xml_escape}}
+          {% else %}
+          {{ post.excerpt | xml_escape}}
+          {% endif %}
+          <br />
+          {{ post.content | xml_escape}}
+          <hr /><p><a href="mailto:{{ site.author_email }}?subject={{ post.title | uri_escape }}">Reply via email</a></p>]]>
+        </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
