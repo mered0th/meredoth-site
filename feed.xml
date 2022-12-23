@@ -22,6 +22,7 @@ layout: null
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <name>{{ site.author | default: site.author | xml_escape }}</name>
+        <category>{{ post.category | xml_escape }}</category>
         <description>
           <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}"><![CDATA[{{ post.summary | markdownify }}{{ post.content | markdownify }}]]></content></description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
