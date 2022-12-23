@@ -15,7 +15,9 @@ permalink: /blog/Execution-order-of-Awake-and-onEnable-in-Unity-is-undefined/
 usemathjax: true
 ---
 
-In Unity when we load a scene we expect Unity's event functions to execute at a certain order. More specifically we expect this order to be true: Awake -> onEnable -> Start as is described in <https://docs.unity3d.com/Manual/ExecutionOrder.html> and actually it is, but with an asterisk.
+In Unity when we load a scene we expect Unity's event functions to execute at a certain order. More specifically we expect this order to be true: 
+Awake -> onEnable -> Start 
+as is described in <https://docs.unity3d.com/Manual/ExecutionOrder.html> and actually it is, but with an asterisk.
 
 This execution order is true only for individual scripts, but not for all your scripts. Let me make this clearer: As you cannot depend on the order of the calls for your Awakes in different scripts you cannot depend that onEnable in a single script will run after all Awakes have finished running in you other scripts.
 
