@@ -24,6 +24,25 @@ Cloudflare's Privacy Policy is here: <https://www.cloudflare.com/privacypolicy/>
 
 Gmail’s Privacy Policy is here: <https://policies.google.com/privacy>
 
+## Newsletter
+
+I use the newsletter to contact you about blog and project updates.
+If you subscribe to the newsletter you can submit your email, which will only be used for the above purpose.
+
+I use Mailchimp in order to send you the emails. Except this service, i do not provide your data to any other third party.
+
+Mailchimp's Privacy policy can be found here: <https://www.intuit.com/privacy/statement/>
+
+Mailchimp's cookie statement can be found here: <https://mailchimp.com/legal/cookies/>
+
+Mailchimp's legal policies are here: <https://mailchimp.com/legal/>
+
+## Comments
+
+This site uses github for comments in the blog section.
+
+Github's privacy policies are here: <https://docs.github.com/en/site-policy/privacy-policies>
+
 ## Secure data handling procedures for personal and sensitive user data
 
 I do everything i can to safeguard all personal data submitted to me. I will only disclose it to third parties upon your consent.
