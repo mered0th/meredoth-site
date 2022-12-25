@@ -13,6 +13,7 @@ thumbnail: /assets/img/posts/Unity_Technologies_logo.png
 keywords:  ['Unity', 'C#']
 permalink: /blog/Execution-order-of-Awake-and-onEnable-in-Unity-is-undefined/
 usemathjax: true
+excerpt_separator: <!--more-->
 ---
 
 In Unity when we load a scene we expect Unity's event functions to execute at a certain order.  
@@ -20,6 +21,7 @@ More specifically we expect this order to be true: Awake -> onEnable -> Start
 as is described in <https://docs.unity3d.com/Manual/ExecutionOrder.html> and actually it is, but with an asterisk.
 
 This execution order is true only for individual scripts, but not for all your scripts. Let me make this clearer: As you cannot depend on the order of the calls for your Awakes in different scripts you cannot depend that onEnable in a single script will run after all Awakes have finished running in you other scripts.
+<!--more-->
 
 For example let's say that we have ScriptA and ScriptB, both of which have the Awake, onEnable and Start event functions. When a scene is loaded Unity guarantees that Start in both of those scripts will start running after all Awakes and onEnables have completed, it also guarantees that Awake will run before onEnable for the same script, but there is no guarantee that onEnable will start running before after all Awakes have finished. That means that any of the following execution orders could be true:
 

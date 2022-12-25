@@ -8,6 +8,7 @@ thumbnail: /assets/img/posts/c-sharp-logo.png
 keywords:  ['C#', 'Enums', 'Coding Principles']
 permalink: /blog/Using-Enums-in-C-Sharp-Part2/
 usemathjax: true
+excerpt_separator: <!--more-->
 ---
 In the [previous part]({% post_url 2022-12-05-Enums-in-c#-part1 %}) we saw how to loop enums in a way that makes refactoring the program easier, by keeping the code that needs to change small and concentrated.
 
@@ -62,6 +63,7 @@ switch (currentDay)
 What if our enum isn't composed by finite values, like the days of the week but is prone to change because of the requirements of our program, like an enum that holds names or titles etc.
 
 Or what if in our enum, we need to add complicated logic, like different times for each day that run different things depending on that day.
+<!--more-->
 
 For example let's suppose that each day has morning, afternoon, evening and night and the data or the logic of our code for that part of the day is different for each part of the day and for each day. Let's also suppose that all this logic is volatile, the requirements keep changing (ex. Let's have our NPC's Monday morning do this and Tuesday afternoon that, oh wait let's change and add Monday's morning logic to Wednesday night and Thursday morning, no let's change it again ...)
 

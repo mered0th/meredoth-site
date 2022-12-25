@@ -8,6 +8,7 @@ thumbnail: /assets/img/posts/c-sharp-logo.png
 keywords:  ['C#', 'Enums', 'Coding Principles']
 permalink: /blog/Using-Enums-in-C-Sharp-Part1/
 usemathjax: true
+excerpt_separator: <!--more-->
 ---
 
 Usually in C# when someone declares an enum writes something like this:
@@ -40,7 +41,7 @@ foreach(var dayValue in Enum.GetValues<Day>())
 }
 ```
 
-respectively, but what about getting the next 10 days after the current day?
+respectively, but what about getting the next 10 days after the current day? <!--more-->
 Usually we do something like this:
 
 ```csharp

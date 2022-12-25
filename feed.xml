@@ -24,7 +24,9 @@ layout: null
         <name>{{ site.author | default: site.author | xml_escape }}</name>
         <category>{{ post.category | xml_escape }}</category>
         <description>
-          <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}"><![CDATA[{{ post.summary | markdownify }}{{ post.content | markdownify }}]]></content></description>
+          <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}"><![CDATA[{{ post.summary | markdownify }}{{ post.excerpt | markdownify }}<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">Go to the full article</a>]]>
+          </content>        
+        </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
