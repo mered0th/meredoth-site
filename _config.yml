@@ -20,6 +20,8 @@ urls:
       url: /about
     - text: Contact
       url : /contact
+    - text: Newsletter
+      url: /newsletter
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
