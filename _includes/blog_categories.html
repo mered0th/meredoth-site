@@ -2,7 +2,7 @@
             {% assign categories = site.categories | sort %}
             {% for tag in categories %} {% capture tag_name %}{{ tag | first }}{% endcapture %}
                 {% if tag_name == 'C#' %}
-                    {% assign url_name = "C#" %}
+                    {% assign url_name = "Csharp" %}
                 {% else %}
                     {% assign url_name = tag_name %}
                 {% endif %}

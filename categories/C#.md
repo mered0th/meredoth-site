@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "C#"
-permalink: "/blog/categories/C#/"
+permalink: "/blog/categories/Csharp/"
 ---
 
 <h5> Posts by Category : {{ page.title }} </h5>
