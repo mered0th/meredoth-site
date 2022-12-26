@@ -1,6 +1,11 @@
 
-            {% assign categories = site.categories | sort %}
-            {% for tag in categories %} {% capture tag_name %}{{ tag | first }}{% endcapture %}
+            {% assign allCategories = site.categories | sort %}
+            <div id="All"></div>
+            <li class="tag-head">
+                <a href="{{ site.url }}{{ site.baseurl }}/blog/categories/">All</a>
+            </li>
+            <a name="{{ tag_name | slugize }}"></a>
+            {% for tag in allCategories %} {% capture tag_name %}{{ tag | first }}{% endcapture %}
                 {% if tag_name == 'C#' %}
                     {% assign url_name = "Csharp" %}
                 {% else %}
@@ -8,7 +13,7 @@
                 {% endif %}
                 <div id="#{{ tag_name }}"></div>
                 <li class="tag-head">
-                    <a href="{{ site.baseurl }}/blog/categories/{{ url_name }}">{{ tag_name }}</a>
+                    <a href="{{ site.url }}{{ site.baseurl }}/blog/categories/{{ url_name }}">{{ tag_name }}</a>
                 </li>
                 <a name="{{ tag_name | slugize }}"></a>
             {% endfor %}
