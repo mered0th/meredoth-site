@@ -28,10 +28,10 @@ For example let's say we have the following:
 IEnemy orc = new Orc();
 ```
 
-The orc object, is of type IEnemy at compile time, but at runtime is of type Orc. Let's suppose that we have a Player class that has the public method ``` Hunt(IEnemy enemy) ```
+The orc object, is of type IEnemy at compile time, but at runtime is of type Orc. Let's also suppose that we have a Player class that has the public method ``` Hunt(IEnemy enemy) ```
 and we want to use it, but the player needs to do different types of hunting depending on the enemy and also use specific methods of the Orc class that are not part of the IEnemy interface. <!--more-->
 
-We can do something like this: 
+We can do something like this:
 
 ``` csharp
 public void Hunt(IEnemy enemy)
@@ -44,7 +44,7 @@ public void Hunt(IEnemy enemy)
 }
 ```
 
-but what if we have different types of IEnemy and for each type we want to use different player hunting methods and different methods that are enemy behaviors and not part of the IEnemy interface. Here's an example with three different types of enemies that implement the IEnemy interface:
+but what if we have different types of IEnemy and for each type we want to use different player hunting methods and different methods that are enemy behaviors and not part of the IEnemy interface? Here's an example with three different types of enemies that implement the IEnemy interface:
 
 ```csharp
 public interface IEnemy { }
@@ -112,7 +112,7 @@ this may work for simple cases, but this method now doesn't do only one thing. I
 
 we have to go inside that switch statement and start changing things. Not only this is prone to bugs because of the switch statement which could reach eventually to be hundred's of lines of code, but also because of the Player class. The Player class will surely have other code too, and for each change we need to make to the Hunt method we risk breaking the Player class. At first let's find a way to take that method out.
 
-This easy: a class doesn't only represent an object of the real world, but can also represent a behavior. So we create a PlayerHunt class and add that Hunt method inside, so the Player class will look now like this:
+This easy: a class doesn't only represent an object of the real world, but can also represent a behavior. So we create a PlayerHunt class and add that Hunt method inside, so the Player class will now look like this:
 
 ```csharp
 public class Player
@@ -176,7 +176,7 @@ public class PlayerHunt
 
 The runtime here will know which overload of the DynamicHunt method to call, depending on the type of our enemy at runtime (which could be Orc, Goblin or Dragon), instead of the type at compile time which is IEnemy. This gives us the flexibility of polymorphism through the IEnemy interface but also the flexibility to make changes easily.
 
-Each different behavior of hunting for the player is inside its own method. Changes will affect only this method by using its local variables. Whenever we need to make a change we can locate the appropriate method and if we need to add a new enemy, we can just add a new method without worrying (like in the switch statement) if we break something by using variables that are global to the Player class.
+Each different behavior of hunting for the player is inside its own method. Changes will affect only this method by using its local variables. Whenever we need to make a change, we can locate the appropriate method and if we need to add a new enemy, we can just add a new method without worrying (like in the switch statement) if we break something by using variables that are global to the Player class.
 
 ## Performance considerations
 
