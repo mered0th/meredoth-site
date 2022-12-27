@@ -10,7 +10,7 @@ permalink: /blog/Using-Enums-in-C-Sharp-Part2/
 usemathjax: true
 excerpt_separator: <!--more-->
 ---
-In the [previous part]({% post_url 2022-12-05-Enums-in-c#-part1 %}) we saw how to loop enums in a way that makes refactoring the program easier, by keeping the code that needs to change small and concentrated.
+In the [previous part]({{ site.url }}{{ site.base_url }}{% post_url 2022-12-05-Enums-in-c#-part1 %}) we saw how to loop enums in a way that makes refactoring the program easier, by keeping the code that needs to change small and concentrated.
 
 ```cs
 public enum Day
