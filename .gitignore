@@ -12,3 +12,4 @@ build/
 .bundle
 .bundle/
 vendor/
+.vs/
