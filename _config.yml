@@ -1,7 +1,7 @@
 title: C# and Unity development
-subtitle: My personal projects and blogging site.
+subtitle: Personal blogging and projects site.
 description: >- # this means to ignore newlines until "baseurl:"
-  A site for Unity and c# enthusiasts.
+  A site for C# and Unity enthusiasts.
 
 url: "https://giannisakritidis.com" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
