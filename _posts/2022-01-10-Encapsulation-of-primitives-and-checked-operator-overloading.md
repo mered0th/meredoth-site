@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Encapsulation of primitive types and checked operator overloading in C# 11."
-summary: "How to encapsulate primitive types to leverage static type safety and overload checked operators to catch bugs faster in development build."
+title: "Encapsulation of primitive types and checked operator overloading in C# 11"
+summary: "How to encapsulate primitive types to leverage static type safety and overload checked operators to catch bugs faster in development build"
 date: '2023-01-10'
 category: C#
 thumbnail: /assets/img/posts/c-sharp-logo.png
@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 
 ## The problem with primitive types
 
-When we code, many times we use one of the primitive types because it is easier, without thinking of creating one of our own. Let's suppose that we are making a game where we have to think of damage. Our player does damage, the NPC's do damage, the enemies do damage, traps, towers, spells etc. Everybody damages everybody and we have different ways of calculating that damage: Abilities, buffs, debuffs, armor, resistances plus a thousand different ways to calculate the final damage on many different situations. Usually we declare a variable as int or float called damage or something like that on every script and we never think twice about that.
+When we code, many times we use one of the primitive types because it is easier, without thinking of creating one of our own. Let's suppose that we are making a game where we have to think of damage. Our player does damage, the NPC's do damage, the enemies do damage, traps, towers, spells etc. Everybody damages everybody and we have different ways of calculating that damage: Abilities, buffs, debuffs, armor, resistances plus a thousand different ways to calculate the final damage on many different situations. Usually we declare a variable as int or float called damage, or something like that, on every script and we never think twice about that.
 
 This may present a problem, if damage is used in many places. The reason is that damage isn't actually a float. It may be represented by a float type, but has to follow certain rules. For example, damage cannot be negative. Sometimes we may imply a rule that negative damage is actually healing, but this is a whole new problem. What we are actually saying then, is that we have a variable called damage, which if it is positive represents damage and if it is negative represents healing. That violates an important rule:  
 <mark> A variable should only be doing one thing.</mark>.  
@@ -159,7 +159,7 @@ or even better we add it as an option to our project file, like this:
 
 As we see, we can have different options for our debug and release builds. Here we run our code in debug mode using the checked operators and in release mode we use the unchecked operators.
 
-Because we want to enforce boundaries for our Damage type, we can overload the checked operators. For example as i mentioned before we don't want our Damage type to be negative. Obviously our code should be made in a way that checks the damage every time so it will never be negative. Checked operators aren't there to replace our code logic but to catch any mistakes that may result in bugs. If we have made a mistake and a bug exists that results in damage having a negative value our tests may not catch it, but the runtime will.
+Because we want to enforce boundaries for our Damage type, we can overload the checked operators. For example as i mentioned before we don't want our Damage type to be negative. Obviously our code should be made in a way that checks the damage every time so it will never be negative. Checked operators aren't there to replace our code logic but to catch any mistakes that may result in bugs. If we have made a mistake and a bug exists, that results in damage having a negative value, our tests may not catch it, but the runtime will.
 
 Checked operators are slow because they have to make the check every time they are used, but in a Debug build where we check our code for bugs and we don't care about performance, they can be really useful. That's why i made the options above to use the checked operators in the Debug build and the normal operators in the Release.
 
@@ -190,7 +190,7 @@ private static float GetResult(float result)
 }
 ```
 
-That's pretty simple, everything is the same as normal operator overloading, only this time we put the word checked right before the operator. In this example obviously only the checked minus and the checked explicit operators need checking, but like this we can easily change the boundaries by changing only the GetResult method if the requirements ever change, for example we may decide that we  will never have the damage go above 1000 and we want to check that our code works correctly after we implement that logic.
+That's pretty simple, everything is the same as normal operator overloading, only this time we put the word checked right before the operator. In this example, obviously, only the checked minus and the checked explicit operators need checking, but implemented like this we can easily change the boundaries by changing only the GetResult method if the requirements ever change, for example we may decide that we  will never have the damage go above 1000 and we want to check that our code works correctly after we implement that logic.
 
 As i said before only the explicit operator has a checked version, the implicit does not, so by defining the explicit operator we cannot do something like this now:
 
@@ -206,7 +206,7 @@ float foo = -10;
 damage = foo;
 ```
 
-One final thing to notice here is that C# doesn't enforce throwing inside the body of checked operators. Instead of throw, our GetResult method could just be logging a message be like this:
+One final thing to notice here is that C# doesn't enforce throwing inside the body of checked operators. Instead of throw, our GetResult method could just be logging a message like this:
 
 ```csharp
 private static float GetResult(float result)
